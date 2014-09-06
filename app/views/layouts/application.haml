@@ -1,0 +1,7 @@
+!!! 5
+%html
+  = render partial: "layouts/head"
+  %body.controller{:class => params[:controller]}
+    = render partial: "layouts/nav"
+    = render partial: "layouts/notice" if notice.present?
+    = yield

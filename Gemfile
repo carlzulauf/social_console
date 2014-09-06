@@ -10,8 +10,9 @@ gem 'therubyracer'
 gem 'faraday'
 
 gem 'haml'
-gem 'sass-rails'
 gem 'coffee-rails'
+gem 'sass-rails'
+gem 'bootstrap-sass'
 gem 'jquery-rails' # for jquery + jquery_ujs
 
 gem 'puma'
