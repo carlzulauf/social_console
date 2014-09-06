@@ -1,4 +1,2 @@
+# Make global SC (Social Console) namespace
 window.SC = {}
-
-SC.Controllers = {}
-SC.Sprites = {}
