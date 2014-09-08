@@ -1,0 +1,9 @@
+.container
+  %h1= "Logged in as #{@user.display_name}"
+  %h2 Credentials
+  - @user.credentials.each do |credential|
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title= credential.display_name
+      .panel-body.inspector
+        %pre= JSON.pretty_generate(credential.auth_data)
