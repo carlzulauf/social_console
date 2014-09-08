@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'sqlite3'
 gem 'threasy', github: "carlzulauf/threasy"
+gem 'omniauth'
+gem 'omniauth-twitter'
 
 gem 'therubyracer'
 gem 'faraday'
