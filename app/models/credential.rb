@@ -18,12 +18,32 @@ class Credential < ActiveRecord::Base
     auth_data["uid"]
   end
 
+  def token
+    auth_data["credentials"]["token"]
+  end
+
+  def secret
+    auth_data["credentials"]["secret"]
+  end
+
   def extract_auth_key
     "#{provider}:#{uid}"
   end
 
   def build_auth_key
     self.auth_key = extract_auth_key
+  end
+
+  def client
+    case provider
+    when "twitter"
+      ::Twitter::REST::Client.new do |c|
+        c.consumer_key        = SC_TWITTER["api_key"]
+        c.consumer_secret     = SC_TWITTER["api_secret"]
+        c.access_token        = token
+        c.access_token_secret = secret
+      end
+    end
   end
 
   def self.from_auth_data(auth_data)

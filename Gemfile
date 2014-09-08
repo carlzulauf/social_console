@@ -18,6 +18,8 @@ gem 'jquery-rails' # for jquery + jquery_ujs
 gem 'puma'
 gem 'pry-rails'
 
+gem 'twitter'
+
 group :development do
   gem 'quiet_assets'
   gem 'better_errors'
