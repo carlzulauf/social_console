@@ -1,0 +1,6 @@
+---
+providers:
+  # Go to https://apps.twitter.com/ to manage your twitter applications
+  twitter:
+    api_key: your-twitter-app-api-key-goes-here
+    api_secret: api-secret-goes-here
