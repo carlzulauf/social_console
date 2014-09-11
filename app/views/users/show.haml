@@ -4,6 +4,10 @@
   - @user.credentials.each do |credential|
     .panel.panel-default
       .panel-heading
-        %h3.panel-title= credential.display_name
+        = credential.display_name
+        .pull-right
+          = link_to(credential, method: :delete, class: "btn btn-xs btn-danger") do
+            %span.glyphicon.glyphicon-trash
+            Delete
       .panel-body.inspector
         %pre= JSON.pretty_generate(credential.auth_data)
