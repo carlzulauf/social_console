@@ -2,6 +2,5 @@
   .jumbotron
     %h1 Your social console
     %p Eventually...
-    - if Rails.env.development?
-      %p= link_to "Sign in as Developer", "/auth/developer", :class => "btn btn-default btn-lg", role: "button"
     %p= link_to "Sign in through twitter", "/auth/twitter", :class => "btn btn-default btn-lg", role: "button"
+    %p= link_to "Sign in through facebook", "/auth/facebook", :class => "btn btn-default btn-lg", role: "button"

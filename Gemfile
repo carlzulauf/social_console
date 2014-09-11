@@ -5,6 +5,7 @@ gem 'sqlite3'
 gem 'threasy', github: "carlzulauf/threasy"
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 gem 'therubyracer'
 gem 'faraday'
@@ -19,6 +20,7 @@ gem 'puma'
 gem 'pry-rails'
 
 gem 'twitter'
+gem 'koala'
 
 group :development do
   gem 'quiet_assets'

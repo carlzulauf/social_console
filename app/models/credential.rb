@@ -43,6 +43,8 @@ class Credential < ActiveRecord::Base
         c.access_token        = token
         c.access_token_secret = secret
       end
+    when "facebook"
+      Koala::Facebook::API.new token
     end
   end
 
