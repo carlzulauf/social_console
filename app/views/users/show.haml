@@ -1,0 +1,13 @@
+.container
+  %h1= "Logged in as #{@user.display_name}"
+  %h2 Credentials
+  - @user.credentials.each do |credential|
+    .panel.panel-default
+      .panel-heading
+        = credential.display_name
+        .pull-right
+          = link_to(credential, method: :delete, class: "btn btn-xs btn-danger") do
+            %span.glyphicon.glyphicon-trash
+            Delete
+      .panel-body.inspector
+        %pre= JSON.pretty_generate(credential.auth_data)

@@ -1,0 +1,15 @@
+---
+providers:
+  # See https://apps.twitter.com/
+  twitter:
+    api_key: your-twitter-app-api-key-goes-here
+    api_secret: api-secret-goes-here
+  # See https://developers.facebook.com/
+  facebook:
+    api_key: api-key-goes-here
+    api_secret: api-secret-goes-here
+    permissions:
+      - email
+      - user_friends
+      - read_stream
+
